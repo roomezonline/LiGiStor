@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{30DDA013-A252-4549-BBE0-794318328370}"
 EndProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{364D8EC4-066
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modeling", "Modeling\Modeling.csproj", "{707EA3BE-FF78-47DA-9B2A-E945A1B4C09C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{6CCEB45C-7237-416F-BC4E-0CD2AB1AC66D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LigiServices", "Services\LigiServices.csproj", "{6CCEB45C-7237-416F-BC4E-0CD2AB1AC66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositry", "Repositry\Repositry.csproj", "{44DB7C3D-34DB-4732-A1AE-5F39E18278A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Repositry\Core.csproj", "{44DB7C3D-34DB-4732-A1AE-5F39E18278A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LigiApp", "LigiApp\LigiApp.csproj", "{13EB4735-3799-4E48-80BE-6821795418F2}"
 EndProject
@@ -50,5 +50,8 @@ Global
 		{6CCEB45C-7237-416F-BC4E-0CD2AB1AC66D} = {364D8EC4-0668-45BA-90BF-EF2D85253958}
 		{44DB7C3D-34DB-4732-A1AE-5F39E18278A7} = {0A01AAA9-C0B8-49D3-80D0-28D898E65BB6}
 		{13EB4735-3799-4E48-80BE-6821795418F2} = {0A01AAA9-C0B8-49D3-80D0-28D898E65BB6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {334AED82-A8D4-483E-AB6A-0E021055A975}
 	EndGlobalSection
 EndGlobal

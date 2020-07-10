@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositry
+namespace LiGiStor.core
 {
     interface LigiInterface
     {
-        List<UserModel> get_user();
+        string registeryuser(UserModel userinfo);
+        List<UserModel> Get_user();
+        List<UserModel> Get_userbyid(string Id);
     }
 }

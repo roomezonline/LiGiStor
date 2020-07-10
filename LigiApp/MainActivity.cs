@@ -13,6 +13,10 @@ namespace LigiApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            var service = new LiGiStor.core.Ligidataservice();
+             
+            
+
         }
     }
 }
