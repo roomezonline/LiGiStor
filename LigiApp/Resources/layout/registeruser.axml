@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/loginbg"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="30dp">
+                <EditText
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Mobile 0916......."
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Name"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="25px"
+                    android:minHeight="25px">
+                    <Button
+                        android:text="ثبت نام"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btnlogin"
+                        android:background="@drawable/rounded_corner_button"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

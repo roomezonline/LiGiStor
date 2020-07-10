@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace LigiApp
 {
-    [Activity(Label = "LigiApp", MainLauncher = true)]
+    [Activity(Label = "LigiApp")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
