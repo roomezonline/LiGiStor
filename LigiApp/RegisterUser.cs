@@ -28,7 +28,7 @@ namespace LigiApp
             txtname = FindViewById<EditText>(Resource.Id.txtName);
             txtpassword = FindViewById<EditText>(Resource.Id.txtPassword);
 
-            //
+            
 
 
         }
