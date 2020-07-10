@@ -18,6 +18,8 @@ namespace LigiApp
         private EditText txtmobile;
         private EditText txtname;
         private EditText txtpassword;
+        private Button btnsave;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,10 +29,19 @@ namespace LigiApp
             txtmobile = FindViewById<EditText>(Resource.Id.txtMobile);
             txtname = FindViewById<EditText>(Resource.Id.txtName);
             txtpassword = FindViewById<EditText>(Resource.Id.txtPassword);
+            btnsave = FindViewById<Button>(Resource.Id.btnlogin);
 
+            btnsave.Click += btn_save;
+
+              
             
 
 
+        }
+
+        private void btn_save(object sender, EventArgs e)
+        {
+             
         }
     }
 }
