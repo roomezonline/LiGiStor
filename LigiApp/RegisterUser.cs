@@ -46,12 +46,22 @@ namespace LigiApp
             {
                 FirstName =txtname .Text,
                 Mobile = txtmobile.Text,
-                Password  = txtpassword.Text
+                Password  = txtpassword.Text,
+                User_Name="مجنون",
+                Type=1,
+                LastName="samsami",
+                Last_seen ="225",
+                Id=3,
+                State="1",
+                Code_Meli=123
+                
                             };
+
+            
 
             var dataserivce = new LiGiStor.core.Ligidataservice ();
 
-            var userid = dataserivce.registeryuser(userinfo);
+            var userid = dataserivce.registeryuser(UserModel.ToEntity( userinfo));
             //ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
             //var editor = sharedPreferences.Edit();
             //editor.PutString("userid", userid);

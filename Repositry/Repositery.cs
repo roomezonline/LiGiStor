@@ -13,7 +13,7 @@ namespace LiGiStor.core
     {
 
         string url = "http://192.168.88.252/";
-
+       // string url = "http://127.0.0.1/";
         public List<UserModel> Get_user()
         {
             throw new NotImplementedException();
