@@ -12,7 +12,7 @@ namespace LiGiStor.core
     public class Repositery : LigiInterface
     {
 
-        string url = "http://http://192.168.88.252/";
+        string url = "http://192.168.88.252/";
 
         public List<UserModel> Get_user()
         {
@@ -38,7 +38,7 @@ namespace LiGiStor.core
             var client = new HttpClient();
             var jsonstring = JsonConvert.SerializeObject(userinfo);
             var content = new StringContent(jsonstring, Encoding.UTF8, "application/json");
-            var result = await client.PostAsync(url + "/api/Ligi/RegisterUser", content);
+            var result = await client.PostAsync(url + "LigiServices/api/ligi/RegisterUser", content);
             var response = await result.Content.ReadAsStringAsync();
             
             return response;

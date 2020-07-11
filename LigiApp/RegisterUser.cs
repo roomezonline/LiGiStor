@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using LiGiStor.Model;
 
 namespace LigiApp
 {
@@ -41,7 +42,28 @@ namespace LigiApp
 
         private void btn_save(object sender, EventArgs e)
         {
-             
+            var userinfo = new UserModel()
+            {
+                FirstName =txtname .Text,
+                Mobile = txtmobile.Text,
+                Password  = txtpassword.Text
+                            };
+
+            var dataserivce = new LiGiStor.core.Ligidataservice ();
+
+            var userid = dataserivce.registeryuser(userinfo);
+            //ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            //var editor = sharedPreferences.Edit();
+            //editor.PutString("userid", userid);
+            //editor.Apply();
+
+            var dialog = new AlertDialog.Builder(this);
+            dialog.SetTitle(" ای دی برگشتی از وب سرویس پس از تبت نام");
+            dialog.SetMessage(string.Format("{0}", userid));
+
+            dialog.Show();
+
+
         }
     }
 }

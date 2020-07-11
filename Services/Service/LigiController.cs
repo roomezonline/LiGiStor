@@ -16,7 +16,7 @@ namespace Services.Service
 [HttpGet]
         public IHttpActionResult Iping()
         {
-            return Ok(" Welcome your Service Is Run  ");
+            return Ok(" Welcome your Service Is Run  1111 ");
         }
 
 
@@ -25,7 +25,7 @@ namespace Services.Service
         {
 
 
-            return Ok("salam welcome");
+            return Ok("salam welcome" + " " + userinfo.LastName + " " + userinfo.FirstName + " " + userinfo.Mobile + " " + userinfo.Password);
 
         }
 

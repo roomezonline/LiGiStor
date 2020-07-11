@@ -7,10 +7,18 @@ using LiGiStor.Model;
 
 namespace LiGiStor.core
 {
-    public class Ligidataservice : LigiInterface
+    public class Ligidataservice  
     {
-        private Repositery actionrepositery; 
+
+        private LigiInterface actionrepositery ;
+        public Ligidataservice()
+        {
+            actionrepositery = new Repositery();
+        }
         public List<UserModel> Get_user()
+
+             
+
         {
             throw new NotImplementedException();
         }
@@ -22,6 +30,11 @@ namespace LiGiStor.core
 
         public string registeryuser(UserModel userinfo)
         {
+
+
+           
+
+
             return actionrepositery.registeryuser(userinfo);
         }
 

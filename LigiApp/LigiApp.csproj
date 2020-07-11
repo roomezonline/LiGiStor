@@ -78,6 +78,10 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modeling\Modeling.csproj">
+      <Project>{707EA3BE-FF78-47DA-9B2A-E945A1B4C09C}</Project>
+      <Name>Modeling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repositry\Core.csproj">
       <Project>{44db7c3d-34db-4732-a1ae-5f39e18278a7}</Project>
       <Name>Core</Name>
