@@ -562,14 +562,14 @@ namespace LigiApp
 			// aapt resource value: 0x7f070003
 			public const int tv_subtitle = 2131165187;
 			
+			// aapt resource value: 0x7f070005
+			public const int txt_Firstname = 2131165189;
+			
 			// aapt resource value: 0x7f070006
-			public const int txt_family = 2131165190;
+			public const int txt_Lastname = 2131165190;
 			
 			// aapt resource value: 0x7f070004
 			public const int txt_mobile = 2131165188;
-			
-			// aapt resource value: 0x7f070005
-			public const int txt_name = 2131165189;
 			
 			static Id()
 			{

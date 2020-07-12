@@ -54,7 +54,7 @@
         android:textSize="15sp"
         android:gravity="right" />
     <EditText
-        android:id="@+id/txt_name"
+        android:id="@+id/txt_Firstname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="نام"
@@ -67,7 +67,7 @@
         android:textSize="15sp"
         android:gravity="right" />
     <EditText
-        android:id="@+id/txt_family"
+        android:id="@+id/txt_Lastname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="نام خانوادگی"

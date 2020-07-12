@@ -1,5 +1,4 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
 
 namespace LigiApp
@@ -14,8 +13,8 @@ namespace LigiApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             var service = new LiGiStor.core.Ligidataservice();
-             
-            
+
+
 
         }
     }

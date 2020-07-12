@@ -11,8 +11,8 @@ namespace LiGiStor.core
 {
     public class Repositery : LigiInterface
     {
-        //string url = "http://192.168.88.252/";
-        string url = "http://192.168.88.5/";
+        string url = "http://192.168.88.252/";
+       // string url = "http://192.168.88.5/";
        // string url = "http://127.0.0.1/";
         public List<UserModel> Get_user()
         {
