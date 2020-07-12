@@ -12,7 +12,47 @@ namespace Services.Service
     {
 
         string config = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["con_store"].ConnectionString;
-         
+
+
+        // تکه کد  نمونه برای ارتباط با دیتا اینتری  
+
+
+        public  List<UserModel> BGet_User_List()
+        {
+            List<UserModel> result = new List<UserModel>();
+            SqlConnection con_AGet_data = new SqlConnection(config);
+            con_AGet_data.Open();
+             
+        //    try
+            //{
+                SqlCommand cmd = new SqlCommand("SELECT  Id, First_Name  , Last_Name , Mobile  , Password , Type    , Code_Meli  , Ip  , Last_seen , State  , User_Name FROM Tb_User where id=1", con_AGet_data);
+                using (System.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows == true)
+                    {
+                        while (reader.Read())
+                            result.Add(UserModel.ToEntityFill(reader));
+                    }
+                }
+            //}
+          //  catch  
+           // {
+            //}
+            //finally
+            //{
+                con_AGet_data.Close();
+                con_AGet_data.Dispose();
+                SqlConnection.ClearPool(con_AGet_data);
+            //}
+
+            return result;
+        }
+
+//تنتنتننت
+
+
+
+
         public string BRegisterUser(UserModel userinfo)
         {
 

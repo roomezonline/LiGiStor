@@ -11,12 +11,24 @@ namespace LiGiStor.core
 {
     public class Repositery : LigiInterface
     {
-        string url = "http://192.168.1.124/";
+       // string url = "http://192.168.1.124/";
        // string url = "http://192.168.88.5/";
-       // string url = "http://127.0.0.1/";
+         string url = "http://192.168.88.252/";
+
+
+
+
         public List<UserModel> Get_user()
         {
-            throw new NotImplementedException();
+            return Task.Run(Get_user_list).Result;
+            
+        }
+        private async Task<List<UserModel>> Get_user_list()
+        {
+            var client = new HttpClient();
+            var result = await client.GetAsync(url + "LigiServices/api/ligi/Get_User_List");
+            var response = await result.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<List<UserModel>>(response);
         }
 
         public List<UserModel> Get_userbyid(string Id)

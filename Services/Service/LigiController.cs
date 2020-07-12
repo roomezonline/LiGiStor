@@ -10,24 +10,30 @@ using System.Data.SqlClient;
 
 namespace Services.Service
 {
-    
+
     public class LigiController : ApiController
     {
 
-        
-      // connectionstring config =  System.Web.Configuration.WebConfigurationManager.ConnectionStrings.("con_store");
-      
+
+        // connectionstring config =  System.Web.Configuration.WebConfigurationManager.ConnectionStrings.("con_store");
+
         // private List<UserModel> usrmodel { get; set; }
         [HttpGet]
         public IHttpActionResult Iping()
 
         {
-            
+
 
             return Ok(" Welcome your Service Is Run  1111 ");
         }
 
-       
+         
+        public IHttpActionResult Get_User_List() 
+        {
+            var db = new BUSINESS();
+            return Json(db.BGet_User_List());
+
+         }
 
         [HttpPost]
         public IHttpActionResult RegisterUser(UserModel userinfo)

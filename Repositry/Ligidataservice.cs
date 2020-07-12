@@ -20,7 +20,7 @@ namespace LiGiStor.core
              
 
         {
-            throw new NotImplementedException();
+            return actionrepositery.Get_user();
         }
 
         public List<UserModel> Get_userbyid(string Id)
