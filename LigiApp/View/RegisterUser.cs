@@ -1,8 +1,11 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Widget;
+using Java.IO;
 using LiGiStor.Model;
 using System;
+using System.Threading.Tasks;
 
 namespace LigiApp
 {
@@ -13,6 +16,8 @@ namespace LigiApp
         private EditText txtFirstname;
         private EditText txtLastname;
         private Button btnsave;
+        private UserModel userinfo;
+        
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,38 +34,82 @@ namespace LigiApp
 
 
 
-
-
         }
 
         private void btn_save(object sender, EventArgs e)
         {
-            var userinfo = new UserModel()
+
+           
+             userinfo = new UserModel()
             {
                 FirstName = txtFirstname.Text,
                 Mobile = txtmobile.Text,
                 LastName = txtLastname.Text
 
-
             };
 
+            new Register_Task(this,userinfo).Execute();
 
 
-            var dataserivce = new LiGiStor.core.Ligidataservice();
-
-            var userid = dataserivce.registeryuser(UserModel.ToEntity(userinfo));
             //ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
             //var editor = sharedPreferences.Edit();
             //editor.PutString("userid", userid);
             //editor.Apply();
 
-            var dialog = new AlertDialog.Builder(this);
-            dialog.SetTitle(" ای دی برگشتی از وب سرویس پس از تبت نام");
-            dialog.SetMessage(string.Format("{0}", userid));
+            //var dialog = new AlertDialog.Builder(this);
+            //dialog.SetTitle(" ای دی برگشتی از وب سرویس پس از تبت نام");
+            //dialog.SetMessage(string.Format("{0}", userid));
 
-            dialog.Show();
+            //dialog.Show();
 
 
         }
-    }
+
+
+
+
+        public class Register_Task : AsyncTask<Java.Lang.Void, Java.Lang.Void, string>
+        {
+            Context mContext;
+            private UserModel userinfo;
+            private ProgressDialog pDialog;
+
+            public Register_Task(Context context,UserModel muserinfo)
+            {
+                
+                mContext = context;
+                userinfo = muserinfo;
+                
+            }
+
+
+            protected override void OnPreExecute()
+            {
+                pDialog = new ProgressDialog(mContext);              
+                pDialog.SetMessage("در حال ثبت اطلاعات...");
+                pDialog.SetCancelable(false);
+                pDialog.Show();
+            }
+
+            protected override string RunInBackground(Java.Lang.Void[] @params)
+            {
+                var dataserivce = new LiGiStor.core.Ligidataservice();
+                var userid = dataserivce.registeryuser(UserModel.ToEntity(userinfo));
+                return userid;
+            }
+
+            protected override void OnPostExecute(string result)
+            {
+                base.OnPostExecute(result);
+               pDialog.Dismiss();
+                Toast.MakeText(mContext, "ثبت نام شما با موفقیت انجام شد " + result , ToastLength.Long).Show();
+            }
+        }
+
+
+
+
+
+        //-------------------------------------------------
+    }  
 }
