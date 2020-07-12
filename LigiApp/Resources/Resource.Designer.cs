@@ -499,17 +499,20 @@ namespace LigiApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int btnlogin = 2131099651;
+			// aapt resource value: 0x7f060004
+			public const int btnlogin = 2131099652;
+			
+			// aapt resource value: 0x7f060001
+			public const int txtFirstName = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int txtLastName = 2131099650;
 			
 			// aapt resource value: 0x7f060000
 			public const int txtMobile = 2131099648;
 			
-			// aapt resource value: 0x7f060001
-			public const int txtName = 2131099649;
-			
-			// aapt resource value: 0x7f060002
-			public const int txtPassword = 2131099650;
+			// aapt resource value: 0x7f060003
+			public const int txtPassword = 2131099651;
 			
 			static Id()
 			{

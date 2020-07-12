@@ -22,7 +22,7 @@ namespace Services.Service
             SqlCommand cmd = new SqlCommand();
              //IHttpActionResult result = null;
 
-            if (Convert.ToInt32(userinfo.Id) > 0)
+            if ( userinfo.Id  > 0)
             {
                 //new SqlCommand("UPDATE  Tb_User    SET Type  = @Type , Code_Meli = @Code_Meli  , Password  = @Password , Ip = @Ip  , Last_seen  = @Last_seen,  State  = @State , First_Name  = @First_Name  , Last_Name  = @Last_Name , Mobile= @Mobile , User_Name= @User_Name  WHERE Id=3", con);
                cmd = new SqlCommand("UPDATE  Tb_User    SET Type  = @Type , Code_Meli = @Code_Meli  , Password  = @Password , Ip = @Ip  , Last_seen  = @Last_seen ,  State  = @State , First_Name  = @First_Name  , Last_Name  = @Last_Name , Mobile = @Mobile , User_Name = @User_Name  WHERE Id = 3", con);
@@ -39,28 +39,26 @@ namespace Services.Service
             //    ip = "Null";
             //}
          //   ip = converttostring(ip);
-            cmd.Parameters.AddWithValue("@Type", Convert.ToInt32(userinfo.Type));
+            cmd.Parameters.AddWithValue("@Type",  userinfo.Type);
 
-            cmd.Parameters.AddWithValue("@User_Name",converttostring( userinfo.User_Name));
-            cmd.Parameters.AddWithValue("@Code_Meli", Convert.ToInt32(userinfo.Code_Meli));
-            cmd.Parameters.AddWithValue("@Password", converttostring( userinfo.Password.ToString()));
+            cmd.Parameters.AddWithValue("@User_Name", userinfo.User_Name);
+            cmd.Parameters.AddWithValue("@Code_Meli",  userinfo.Code_Meli );
+            cmd.Parameters.AddWithValue("@Password", userinfo.Password);
             cmd.Parameters.AddWithValue("@Ip",userinfo.Ip);
-            cmd.Parameters.AddWithValue("@Last_seen", userinfo.Last_seen.ToString());
-            cmd.Parameters.AddWithValue("@State", userinfo.State.ToString());
-            cmd.Parameters.AddWithValue("@First_Name", userinfo.FirstName.ToString());
-            cmd.Parameters.AddWithValue("@Last_Name", userinfo.LastName.ToString());
-            cmd.Parameters.AddWithValue("@Mobile", userinfo.Mobile.ToString());
-            //try
-            //{
-            con.Open();
+            cmd.Parameters.AddWithValue("@Last_seen", userinfo.Last_seen );
+            cmd.Parameters.AddWithValue("@State", userinfo.State );
+            cmd.Parameters.AddWithValue("@First_Name", userinfo.FirstName );
+            cmd.Parameters.AddWithValue("@Last_Name", userinfo.LastName );
+            cmd.Parameters.AddWithValue("@Mobile", userinfo.Mobile );
             string id;
+            try
+             {
+            con.Open();
+ 
             if (Convert.ToInt32(userinfo.Id) > 0)
             {
                 cmd.ExecuteNonQuery();
-
-                // con.Close();
-                //con.Dispose();
-                //  id= userinfo.Id.ToString();
+                 
                 id = "update";
 
             }
@@ -70,47 +68,26 @@ namespace Services.Service
             }
 
            // return Ok("some string");
-            //}
+             }
 
-            //catch
+             catch
+             
+             {
+                id = "Error";
+             }
 
-            //{
+             finally
+             {
+                con.Close();
+                con.Dispose();
 
-            //}
+                }
 
-            //finally
-            //{
-            con.Close();
-            con.Dispose();
-
-            //}
-            
-            return  (id) ;
+                return (id) ;
         }
 
+ 
 
-        //public IHttpActionResult GetInteger()
-        //{
-        //    // Ok is a convenience method for returning a 200 Ok response
-        //    return Ok(1);
-        //}
-
-
-
-        private string converttostring(string fld)
-        {
-            string result = null;
-            if (fld.Length>0)
-            {
-                result = fld;
-            }
-        
-            else
-            {
-                result = "Null";
-            }
-            return result;
-}
 
 
     }

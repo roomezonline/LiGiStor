@@ -29,10 +29,20 @@
                     android:textColor="@android:color/background_dark"
                     android:textColorHint="@android:color/darker_gray" />
                 <EditText
-                    android:id="@+id/txtName"
+                    android:id="@+id/txtFirstName"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:hint="Name"
+                    android:hint="First Name"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                   <EditText
+                    android:id="@+id/txtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Last Name"
                     android:inputType="textEmailAddress"
                     android:background="@drawable/rounded_corner"
                     android:layout_marginBottom="15dp"

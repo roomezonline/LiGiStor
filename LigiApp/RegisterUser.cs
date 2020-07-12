@@ -17,7 +17,8 @@ namespace LigiApp
     public class RegisterUser : Activity
     {
         private EditText txtmobile;
-        private EditText txtname;
+        private EditText txtFirstname;
+        private EditText txtLastname;
         private EditText txtpassword;
         private Button btnsave;
 
@@ -28,7 +29,8 @@ namespace LigiApp
             // Create your application here
 
             txtmobile = FindViewById<EditText>(Resource.Id.txtMobile);
-            txtname = FindViewById<EditText>(Resource.Id.txtName);
+            txtFirstname = FindViewById<EditText>(Resource.Id.txtFirstName);
+            txtLastname = FindViewById<EditText>(Resource.Id.txtLastName);
             txtpassword = FindViewById<EditText>(Resource.Id.txtPassword);
             btnsave = FindViewById<Button>(Resource.Id.btnlogin);
 
@@ -44,18 +46,11 @@ namespace LigiApp
         {
             var userinfo = new UserModel()
             {
-                FirstName =txtname .Text,
+                FirstName = txtFirstname.Text,
+                LastName = txtLastname.Text,
                 Mobile = txtmobile.Text,
-                Password  = txtpassword.Text,
-                User_Name="مجنون",
-                Type=1,
-                LastName="samsami",
-                Last_seen ="225",
-                Id=3,
-                State="1",
-                Code_Meli=123
-                
-                            };
+                Password  = txtpassword.Text
+                                             };
 
             
 
