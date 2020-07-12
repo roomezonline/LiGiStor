@@ -1,115 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterFragment"
-    android:background="@drawable/bgregister">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/linearLayout1"
-        android:gravity="right">
-        <TextView
-            android:id="@+id/tv_logo"
-            android:text="ثبت نام"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical" />
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView1"
-            android:background="@drawable/logostore" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/tv_subtitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="اطلاعات مورد نیاز برای ثبت نام در دیجی استور"
-        android:textSize="17sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="25sp" />
-    <EditText
-        android:id="@+id/txt_mobile"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="شماره همره"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:inputType="phone"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp"
-        android:gravity="right" />
-    <EditText
-        android:id="@+id/txt_name"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="نام"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:inputType="text"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp"
-        android:gravity="right" />
-    <EditText
-        android:id="@+id/txt_family"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="نام خانوادگی"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:inputType="text"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp"
-        android:gravity="right" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/btn_register"
+        android:layout_height="match_parent"
+        android:background="@drawable/loginbg"
+        android:orientation="vertical">
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_custom"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp"
-            android:layout_centerInParent="true"
-            android:textColor="@android:color/white"
-            android:text="ثبت اطلاعات کاربری"
-            android:textStyle="bold"
-            android:textSize="18sp" />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_left"
-            android:layout_below="@id/btn_register"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/lbl_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="قبلا ثبت نام کردید؟"
-            android:textSize="15sp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp" />
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="30dp">
+                <EditText
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Mobile 0916......."
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <EditText
+                    android:id="@+id/txtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="First Name"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                   <EditText
+                    android:id="@+id/txtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Last Name"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="25px"
+                    android:minHeight="25px">
+                    <Button
+                        android:text="ثبت نام"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btnlogin"
+                        android:background="@drawable/rounded_corner_button"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>
