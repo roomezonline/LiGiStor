@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LigiApp
 {
-    [Activity(Label = "RegisterUser", MainLauncher = true)]
+    [Activity(Label = "RegisterUser")]
     public class RegisterUser : Activity
     {
         private EditText txtmobile;

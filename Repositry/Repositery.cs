@@ -26,7 +26,7 @@ namespace LiGiStor.core
         private async Task<List<UserModel>> Get_user_list()
         {
             var client = new HttpClient();
-            var result = await client.GetAsync(url + "LigiServices/api/ligi/Get_User_List");
+            var result = await client.GetAsync(url + "LigiServices/api/Get/Get_User_List");
             var response = await result.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<List<UserModel>>(response);
         }
@@ -50,7 +50,7 @@ namespace LiGiStor.core
             var client = new HttpClient();
             var jsonstring = JsonConvert.SerializeObject(userinfo);
             var content = new StringContent(jsonstring, Encoding.UTF8, "application/json");
-            var result = await client.PostAsync(url + "LigiServices/api/ligi/RegisterUser", content);
+            var result = await client.PostAsync(url + "LigiServices/api/Set/RegisterUser", content);
             var response = await result.Content.ReadAsStringAsync();
             
             return response;

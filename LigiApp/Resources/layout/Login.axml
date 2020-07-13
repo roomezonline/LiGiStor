@@ -19,7 +19,7 @@
         android:gravity="right">
         <TextView
             android:id="@+id/tv_logo"
-            android:text="ثبت نام"
+            android:text="ورود به سیستم"
             android:textAlignment="center"
             android:textSize="30sp"
             android:layout_width="wrap_content"
@@ -35,12 +35,26 @@
         android:id="@+id/tv_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="اطلاعات مورد نیاز برای ثبت نام در دیجی استور"
+        android:text=" شماره تلفنی که قبلا در لیجی استور ثبت نام کرده اید"
         android:textSize="17sp"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="50dp"
         android:layout_marginRight="25sp" />
+    <TextView
+        android:layout_marginTop="40dp"
+        android:text="شماره تلفن"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textAlignment="viewEnd"
+    android:layout_marginRight="22dp" 
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:id="@+id/textView1" />
+    
+
     <EditText
+        android:layout_marginTop="10dp"
         android:id="@+id/txt_mobile"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -48,43 +62,18 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:padding="15dp"
+        android:padding="10dp"
         android:inputType="phone"
         android:background="@drawable/et_custom"
-        android:textSize="15sp"
+        android:textSize="22sp"
         android:gravity="right" />
-    <EditText
-        android:id="@+id/txt_Firstname"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="نام"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:inputType="text"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp"
-        android:gravity="right" />
-    <EditText
-        android:id="@+id/txt_Lastname"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="نام خانوادگی"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:inputType="text"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp"
-        android:gravity="right" />
+   
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_login"  
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_custom"
@@ -93,20 +82,20 @@
             android:layout_marginBottom="30dp"
             android:layout_centerInParent="true"
             android:textColor="@android:color/white"
-            android:text="ثبت اطلاعات کاربری"
+            android:text="ورود به سیستم"
             android:textStyle="bold"
             android:textSize="18sp" />
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_left"
-            android:layout_below="@id/btn_register"
+            android:layout_below="@id/btn_login"
             android:layout_centerHorizontal="true" />
         <TextView
             android:id="@+id/lbl_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="قبلا ثبت نام کردید؟"
+            android:text="قبلا ثبت نام نکردید؟"
             android:textSize="15sp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"

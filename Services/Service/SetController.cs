@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 namespace Services.Service
 {
 
-    public class LigiController : ApiController
+    public class SetController : ApiController
     {
 
 
@@ -27,13 +27,7 @@ namespace Services.Service
             return Ok(" Welcome your Service Is Run  1111 ");
         }
 
-         
-        public IHttpActionResult Get_User_List() 
-        {
-            var db = new BUSINESS();
-            return Json(db.BGet_User_List());
-
-         }
+      
 
         [HttpPost]
         public IHttpActionResult RegisterUser(UserModel userinfo)
